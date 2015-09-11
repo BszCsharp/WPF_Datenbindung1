@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApplicationNWind.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window2" Height="300" Width="400">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="38,12,0,0" Name="textBoxProductId" VerticalAlignment="Top" Width="169" AcceptsReturn="True" />
+        <Button Content="suchen" Height="23" HorizontalAlignment="Left" Margin="213,12,0,0" Name="buttonSuchen" VerticalAlignment="Top" Width="96" Click="ButtonSuchen_Click"  />
+        <Grid Height="125" HorizontalAlignment="Left" Margin="38,41,0,0" Name="grid1" VerticalAlignment="Top" Width="271">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Content="Product-Id"></Label>
+            <Label Grid.Column="0" Grid.Row="1" Content="Product-Name"></Label>
+            <Label Grid.Column="0" Grid.Row="2" Content="Unitprice"></Label>
+            <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Path=ProductId}" Name="txtBlockProductId" />
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding  Path=ProductName}" Name="txtBlockProdName"></TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Path=UnitPrice}" Name="txtBlockUnitPrice"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>
